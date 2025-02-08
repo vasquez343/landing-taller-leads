@@ -141,6 +141,24 @@
                 font-size: 2rem;
             }
         }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            margin: 20px 0;
+            border-radius: var(--border-radius);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: var(--border-radius);
+        }
     </style>
 </head>
 <body>
@@ -183,7 +201,18 @@
         <div class="requisito">
             <h3>4. Cuenta de OpenAI</h3>
             <p>Necesitas una cuenta de OpenAI (diferente a la cuenta de ChatGPT) con al menos $5 USD de saldo.</p>
-            <p>Puedes ver las instrucciones detalladas en nuestro video tutorial.</p>
+            <p>Puedes ver las instrucciones detalladas en este video tutorial:</p>
+            <div class="video-container">
+                <iframe 
+                    width="100%" 
+                    height="315" 
+                    src="https://www.youtube.com/embed/28ZXxZSiRWc" 
+                    title="Tutorial OpenAI" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
         </div>
 
         <div class="importante">

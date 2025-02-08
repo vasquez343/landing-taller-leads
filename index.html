@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller de Automatización con Make.com</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #3b82f6;
+            --background-color: #f8fafc;
+            --text-color: #1e293b;
+            --border-radius: 12px;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+        
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+
+        h1 {
+            color: var(--text-color);
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-top: 2rem;
+            color: var(--primary-color);
+        }
+
+        .requisito {
+            background-color: white;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: var(--border-radius);
+            border: 1px solid #e2e8f0;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .requisito:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+        }
+
+        .requisito h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .requisito h3::before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+        }
+
+        .importante {
+            background-color: #fffbeb;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: var(--border-radius);
+            border: 1px solid #fcd34d;
+        }
+
+        .importante h3 {
+            color: #92400e;
+            margin-top: 0;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--secondary-color);
+            text-decoration: underline;
+        }
+
+        ol, ul {
+            padding-left: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 12px;
+        }
+
+        ul li::marker {
+            color: var(--primary-color);
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.6s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 20px;
+            }
+
+            .container {
+                padding: 25px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container fade-in">
+        <h1>Taller de Automatización de Respuesta a Leads con Make.com</h1>
+        
+        <p>¡Bienvenidos a este taller sobre automatización de procesos con inteligencia artificial! Como la metodología del taller es aprender haciendo, necesitamos asegurarnos de que cuentes con todas las herramientas necesarias antes de comenzar.</p>
+
+        <h2>Requisitos Previos</h2>
+
+        <div class="requisito">
+            <h3>1. Cuenta de Gmail</h3>
+            <p>Necesitas una cuenta de correo electrónico que termine en @gmail.com</p>
+            <p>Si no tienes una, puedes crearla en <a href="https://www.gmail.com" target="_blank">www.gmail.com</a></p>
+        </div>
+
+        <div class="requisito">
+            <h3>2. Cuenta de Make.com</h3>
+            <ol>
+                <li>Ingresa a <a href="https://www.make.com" target="_blank">www.make.com</a></li>
+                <li>Haz clic en "Sign Up"</li>
+                <li>Completa el formulario con:
+                    <ul>
+                        <li>Tu nombre</li>
+                        <li>Tu correo</li>
+                        <li>Hosting Region = US</li>
+                        <li>Country = Colombia</li>
+                    </ul>
+                </li>
+                <li>Responde las preguntas adicionales (puedes seleccionar "other" si lo prefieres)</li>
+                <li>¡Es gratis! No necesitas realizar ningún pago para comenzar</li>
+            </ol>
+        </div>
+
+        <div class="requisito">
+            <h3>3. Cuenta de RapidAPI</h3>
+            <p>Visita <a href="https://rapidapi.com" target="_blank">rapidapi.com</a> y haz clic en "Sign Up" para crear tu cuenta.</p>
+        </div>
+
+        <div class="requisito">
+            <h3>4. Cuenta de OpenAI</h3>
+            <p>Necesitas una cuenta de OpenAI (diferente a la cuenta de ChatGPT) con al menos $5 USD de saldo.</p>
+            <p>Puedes ver las instrucciones detalladas en nuestro video tutorial.</p>
+        </div>
+
+        <div class="importante">
+            <h3>⚠️ IMPORTANTE</h3>
+            <p>Para aprovechar al máximo el taller, necesitarás dos pantallas:</p>
+            <ul>
+                <li>Una para ver lo que el instructor está haciendo</li>
+                <li>Otra para realizar tus propias actividades</li>
+            </ul>
+            <p>Si no tienes dos pantallas, te recomendamos unirte a la llamada desde tu celular y trabajar en tu computador.</p>
+        </div>
+    </div>
+
+    <script>
+        // Añadir animación de entrada a cada requisito
+        document.addEventListener('DOMContentLoaded', () => {
+            const requisitos = document.querySelectorAll('.requisito');
+            requisitos.forEach((req, index) => {
+                req.style.opacity = '0';
+                req.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                    req.style.transition = 'all 0.6s ease';
+                    req.style.opacity = '1';
+                    req.style.transform = 'translateY(0)';
+                }, 100 * (index + 1));
+            });
+        });
+    </script>
+</body>
+</html> 
